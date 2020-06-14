@@ -1,0 +1,157 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    line-height: 1.6;
+}
+
+/* Heading */
+
+.header-title {
+    font-size: 4rem;
+    font-weight: 100;
+    text-align: center;
+    font-family: "Fredericka the Great", cursive;
+}
+
+/* Main  */
+
+.article-title {
+    font-size: 1.8rem;
+    font-weight: 100;
+    text-align: center;
+}
+
+.puppy-image {
+    width: 100%;
+    border-radius: 5px;
+}
+
+article {
+    padding: 1rem;
+    border-left: 1px solid black;
+}
+
+.flex-container article:first-of-type,
+.flex-container article:last-of-type {
+    width: 25%;
+    border-right: 1px solid black;
+}
+
+.flex-container article:nth-of-type(2) {
+    border-left: none;
+    width: 50%;
+}
+
+.flex-container {
+    display: flex;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.flex-space-center {
+    justify-content: center;
+}
+
+.vertical-border {
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+.no-top-border {
+    border-top: none;
+}
+
+/* Nav */
+
+main nav {
+    width: 75%;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+nav li {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    padding: 1.5rem;
+    flex: 1;
+    font-size: 1.9rem;
+    font-weight: 700;
+}
+
+nav li:first-of-type {
+    background-color: #ffeaa7;
+}
+nav li:nth-of-type(2) {
+    background-color: #81ecec;
+}
+nav li:nth-of-type(3) {
+    background-color: #55efc4;
+}
+nav li:nth-of-type(4) {
+    background-color: #74b9ff;
+}
+nav li:last-of-type {
+    background-color: #a29bfe;
+}
+
+nav a {
+    text-decoration: none;
+    color: #666666;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 768px) {
+    /* Header */
+    .header-title {
+        font-size: 2.5rem;
+    }
+
+    /* Main */
+    .flex-container article {
+        padding: 0.7rem;
+        border: 1px solid black;
+        border-top: none;
+    }
+    .flex-container {
+        flex-direction: column;
+    }
+    .flex-container article:first-of-type,
+    .flex-container article:last-of-type {
+        width: 100%;
+    }
+
+    .flex-container article:nth-of-type(2) {
+        border-left: 1px solid black;
+        width: 100%;
+    }
+    .flex-container article:last-of-type {
+        border-bottom: none;
+    }
+    section.vertical-border:first-of-type {
+        border-bottom: 1px solid black;
+    }
+
+    .flex-container:last-of-type article {
+        border-bottom: 2px solid black;
+    }
+
+    main nav {
+        width: 100%;
+    }
+    nav li {
+        font-size: 1.6rem;
+    }
+}
